@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#05050a">
+<title>TELECART V2 | کارت هویت دیجیتال</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@200;400;700;900&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+<div class="orbs" aria-hidden="true"><i></i><i></i><i></i></div>
+<main class="app">
+ <header><div class="logo">TELECART<sup>V2</sup></div><div class="pill" id="pill"></div></header>
+
+ <section class="stage" id="stage"><div class="tilt" id="tilt">
+  <div class="card s0" id="card">
+   <div class="bgimg"><img id="bgi" alt=""></div>
+   <div class="photo"><span id="ini"></span><img id="ph" alt=""></div>
+   <div class="shade"></div><div class="fx"></div><div class="gloss"></div>
+   <div class="txt">
+    <div class="rar" id="rar"></div>
+    <h2 id="nm"></h2><div class="un" id="un"></div><p id="bioOut"></p>
+    <div class="xp"><span id="lv"></span><i><b id="xpb"></b></i></div>
+   </div>
+   <div class="foot"><span id="uid"></span><span id="score"></span></div>
+  </div>
+ </div></section>
+
+ <section class="car" id="car" aria-label="سبک کارت"></section>
+
+ <section class="glass panel">
+  <div class="row">
+   <label class="btn" for="file">آپلود تصویر</label><input id="file" type="file" accept="image/*" hidden>
+   <button class="btn" id="fit" type="button"></button>
+  </div>
+  <label class="rng">بزرگ‌نمایی<input id="zoom" type="range" min="1" max="2.5" step="0.05" value="1"></label>
+  <div class="chips" id="fx"></div>
+  <textarea id="bio" rows="3" maxlength="120" placeholder="بیوگرافی کوتاه (حداکثر ۳ خط)"></textarea>
+  <button class="btn main" id="make" type="button">ساخت کارت جدید</button>
+  <div class="row after" id="after">
+   <button class="btn" id="dl" type="button">دانلود PNG</button>
+   <button class="btn pulse" id="sh" type="button">اشتراک‌گذاری</button>
+  </div>
+ </section>
+
+ <section class="glass panel ref">
+  <h3>لینک دعوت شما</h3>
+  <p class="muted">با هر دوستی که با لینک شما وارد شود، یک کارت اضافه می‌گیرید.</p>
+  <div class="row"><input id="ref" readonly dir="ltr" aria-label="لینک دعوت"><button class="btn" id="cp" type="button">کپی</button></div>
+  <div class="muted">دعوت‌های موفق: <b id="rc">۰</b></div>
+ </section>
+</main>
+
+<div class="lock" id="lock" hidden><div class="sheet glass">
+ <div class="halo"></div>
+ <h2>قفل شده</h2>
+ <p>تعداد کارت‌های شما تمام شده است</p>
+ <p class="muted">لینک دعوت را بفرستید؛ با ورود هر دوست، یک کارت جدید باز می‌شود.</p>
+ <div class="row"><button class="btn main" id="lsh" type="button">ارسال لینک دعوت</button><button class="btn" id="lcp" type="button">کپی لینک</button></div>
+ <div class="vip">ارتقا به VIP · به‌زودی</div>
+ <button class="x" id="lx" type="button">بستن</button>
+</div></div>
+<div class="toast" id="toast" role="status"></div>
+<div class="burst" id="burst" aria-hidden="true"></div>
+<script src="app.js"></script>
+</body>
+</html>
